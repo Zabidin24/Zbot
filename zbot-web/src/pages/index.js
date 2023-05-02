@@ -1,6 +1,9 @@
 import { useState } from "react";
 export default function Home() {
   const [apikey, SetApikey]=useState('');
+  function sendrequest(){
+console.log('Button clicked');
+  }
 
   return <div className="flex flex-col h-screen"> 
       <nav className="shadow p-2 flex flex-row justify-between items-center">
@@ -13,5 +16,11 @@ export default function Home() {
          </div>
          </nav> 
          
+         <div className="p-4"> 
+          <button className="border rounded-md p-2 bg-blue-500 hover:bg-blue-600 text-white
+           " onClick={sendrequest}> 
+            Send request 
+          </button>
+         </div>
          </div>
 }
